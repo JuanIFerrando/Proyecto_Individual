@@ -1,0 +1,4 @@
+export const GET_COUNTRIES = "GET_COUNTRIES";
+export const GET_ACTIVITIES = "GET_ACTIVITIES";
+export const FILTER_ACTIVITY = "FILTER_ACTIVITY";
+export const RESET_PAGE = "RESET_PAGE";

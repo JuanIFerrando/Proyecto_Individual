@@ -1,0 +1,98 @@
+@keyframes text-pop-up-top {
+    0% {
+      transform: translateY(0);
+      transform-origin: 50% 50%;
+      text-shadow: none;
+    }
+    100% {
+      transform: translateY(-50px);
+      transform-origin: 50% 50%;
+      text-shadow: 0 1px 0 #5c575796, 0 2px 0 #5c575796, 0 3px 0 #5c575796, 0 4px 0 #5c575796, 0 5px 0 #5c575796, 0 6px 0 #5c575796, 0 7px 0 #5c575796, 0 8px 0 #5c575796, 0 9px 0 #5c575796, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+}
+  
+
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+  
+  
+@keyframes shadow-drop-2-tr {
+    0% {
+        transform: translateZ(0) translateX(0) translateY(0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+        transform: translateZ(50px) translateX(-12px) translateY(12px);
+        box-shadow: 12px -12px 20px -12px rgba(0, 0, 0, 0.35);
+    }
+}  
+
+.card {
+    border-top: 3px double #62929a;
+    border-right: 1px groove #62929a;
+    border-bottom: 3px double #62929a;
+    border-left: 1px groove #62929a;
+    border-radius: 10px; 
+    width: 170px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9em;
+    text-align: center;
+    background-color: #efecec3f;
+    animation: shadow-drop-2-tr 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    margin: 0 1em;
+    margin-top: 1.7rem;
+}
+
+.textContainer {
+    margin-top: 5rem; 
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    max-height: 127px;
+    border: 2px solid #62929a; 
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img:hover {
+    transform: translateY(-27px); 
+    box-shadow: 0 28px 35px rgba(0, 0, 0, 0.3); 
+}
+
+.longText {
+    animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    font-size: 14px;
+    margin-top: 0.5rem;
+}
+
+.card:hover {
+    animation: jello-horizontal 0.9s both;
+}
